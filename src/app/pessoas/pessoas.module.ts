@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -26,7 +27,8 @@ import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.co
     ButtonModule,
     TableModule,
     TooltipModule,
-    InputMaskModule
+    InputMaskModule,
+    SharedModule
   ],
   exports: [
     PessoaCadastroComponent,
