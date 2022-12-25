@@ -1,7 +1,9 @@
+import { LancamentosRoutingModule } from './lancamentos-routing.module';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
@@ -34,15 +36,13 @@ import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos
     SelectButtonModule,
     DropdownModule,
 
-    SharedModule
+    SharedModule,
+    LancamentosRoutingModule
   ],
   declarations: [
     LancamentoCadastroComponent,
     LancamentosPesquisaComponent
   ],
-  exports: [
-    LancamentoCadastroComponent,
-    LancamentosPesquisaComponent
-  ]
+  exports: []
 })
 export class LancamentosModule { }

@@ -5,6 +5,7 @@ import { Table } from 'primeng/table';
 
 import { LancamentoService, LancamentoFiltro } from './../lancamento.service';
 import { ErrorHandlerService } from './../../core/error-handler.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-lancamentos-pesquisa',
@@ -24,10 +25,12 @@ export class LancamentosPesquisaComponent implements OnInit {
     private lancamentoService: LancamentoService,
     private errorHandler: ErrorHandlerService,
     private messageService: MessageService,
-    private confirmation: ConfirmationService
+    private confirmation: ConfirmationService,
+    private title: Title
   ) { }
 
   ngOnInit() {
+    this.title.setTitle('Pesquisa de lançamentos');
   }
 
   pesquisar(pagina: number = 0): void {
